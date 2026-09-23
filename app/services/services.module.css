@@ -1,0 +1,88 @@
+.servicesPage :global(.services-section-three--reference) {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  background-color: #fff;
+}
+
+.servicesPage :global(.services-section-three--reference .services > .row) {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  margin: 0;
+}
+
+.servicesPage :global(.services-section-three--reference .service-block-two) {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.servicesPage :global(.services-section--reference) {
+  padding: 120px 0 90px;
+  background: var(--thm-black) url("/services-pattern-1.webp") center top repeat;
+  color: #fff;
+}
+
+.servicesPage :global(.services-section--reference > .auto-container > .row) {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: flex-start;
+}
+
+.servicesPage :global(.services-section--reference .title-block) {
+  grid-column: span 2;
+  width: auto;
+  max-width: none;
+}
+
+.servicesPage :global(.services-section--reference .service-block) {
+  grid-column: span 1;
+  width: auto;
+  max-width: none;
+}
+
+.servicesPage :global(.services-section--reference .service-block .inner-box) {
+  background: #1c1e22;
+}
+
+.servicesPage :global(.services-section--reference .service-block .inner-box:hover) {
+  background: var(--thm-base);
+}
+
+.servicesPage :global(.we-work-section--reference) {
+  padding: 120px 0 80px;
+}
+
+.servicesPage :global(.work-tabs .tab-btn:focus-visible) {
+  outline: 3px solid var(--thm-base);
+  outline-offset: -3px;
+}
+
+@media (max-width: 1199px) {
+  .servicesPage :global(.services-section-three--reference .services > .row) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .servicesPage :global(.services-section--reference > .auto-container > .row) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .servicesPage :global(.services-section--reference .title-block) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .servicesPage :global(.services-section-three--reference .services > .row) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .servicesPage :global(.services-section--reference > .auto-container > .row) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .servicesPage :global(.services-section--reference .title-block) {
+    grid-column: span 1;
+  }
+}

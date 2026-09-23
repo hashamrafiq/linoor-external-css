@@ -1,0 +1,329 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+.route-transition-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000000;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: var(--thm-black, #1c1e22);
+}
+
+.route-transition-loader--loading,
+.route-transition-loader--finishing {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.route-transition-loader .icon {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: url("/linoor-preloader.png") center center / auto no-repeat;
+  transition: opacity 200ms ease;
+  animation: linoor-loader-rotate 2s linear infinite;
+}
+
+.route-transition-loader--loading .icon {
+  opacity: 1;
+}
+
+@keyframes linoor-loader-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main-header .header-upper {
+  transition: background-color 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.main-header.is-scrolled .header-upper {
+  background-color: #000;
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.24);
+}
+
+.main-menu .navigation > li.megamenu-clickable.is-open > ul {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.mobile-nav-toggler {
+  display: none;
+  background: transparent;
+  border: 0;
+}
+
+.testimonials-carousel .owl-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.testimonials-carousel .owl-nav button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  background: var(--thm-black);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.testimonials-carousel .owl-nav button:hover {
+  background: var(--thm-base);
+}
+
+/* About Us reference treatments. */
+.featured-section.featured-section__about-two {
+  background-color: #fff;
+  background-image: none;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.sponsors-section.sponsors-section__about-two {
+  background-color: var(--thm-base);
+}
+
+/* Contact Us reference layout. */
+.contact-section--reference .upper-info > .row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  margin: 0;
+}
+
+.contact-section--reference .upper-info .info-block {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1199px) {
+  .contact-section--reference .upper-info > .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-section--reference .upper-info > .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .mobile-nav-toggler {
+    display: block;
+  }
+}
+
+.side-menu__block.is-open {
+  transform: scale(1, 1);
+}
+
+.search-popup.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.style-switcher.is-open {
+  transform: translateX(0);
+}
+
+body.is-boxed .page-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.12);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+main .wow {
+  visibility: hidden !important;
+  animation-name: none !important;
+}
+
+.main-footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.main-footer .footer-grid > .column {
+  width: auto;
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1199px) {
+  .main-footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-footer .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-section-two .service-block-two {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .get-quote-section .left-col {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .get-quote-section .right-col {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-transition-loader .icon {
+    animation: none;
+  }
+
+  main .wow {
+    visibility: visible !important;
+    animation-name: none !important;
+  }
+}
+
+/* Homepage-only replacements for the reference site's jQuery UI select and video lightbox. */
+.get-quote-section .field-inner {
+  position: relative;
+}
+
+.home-quote-select-menu {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 5px);
+  right: 0;
+  left: 0;
+  max-height: 245px;
+  margin: 0;
+  padding: 8px 0;
+  overflow-y: auto;
+  list-style: none;
+  border: 1px solid #f4f5f8;
+  border-radius: 7px;
+  background: #f4f5f8;
+  box-shadow: 0 12px 24px rgba(28, 30, 34, 0.14);
+}
+
+.home-quote-select-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 30px;
+  border: 0;
+  background: transparent;
+  color: var(--thm-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.home-quote-select-menu button:hover,
+.home-quote-select-menu button:focus-visible,
+.home-quote-select-menu button[aria-selected="true"] {
+  outline: none;
+  background: var(--thm-base);
+  color: #ffffff;
+}
+
+.home-video-dialog-open {
+  overflow: hidden;
+}
+
+.home-video-dialog {
+  position: fixed;
+  z-index: 100001;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  background: rgba(28, 30, 34, 0.92);
+}
+
+.home-video-dialog iframe {
+  width: min(100%, 1000px);
+  aspect-ratio: 16 / 9;
+  border: 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.home-video-dialog__close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  font-size: 38px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Keep the MooAssist Home 02 banner message compact while retaining its three-line composition. */
+.banner-section.banner-two .banner-carousel .content-box h1 {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 92px;
+  line-height: 0.94em;
+}
+
+@media only screen and (max-width: 1199px) {
+  .banner-section.banner-two .banner-carousel .content-box h1 {
+    font-size: 76px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .banner-section.banner-two .banner-carousel .content-box h1 {
+    font-size: 64px;
+    line-height: 1em;
+  }
+
+  .banner-section.banner-two .banner-carousel .content-box h1 br {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .banner-section.banner-two .banner-carousel .content-box h1 {
+    max-width: 100%;
+    font-size: 42px;
+  }
+}

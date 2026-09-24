@@ -6,6 +6,13 @@ body {
   min-width: 320px;
 }
 
+#thm-logo,
+#fLogo {
+  width: 133px;
+  height: 34px;
+  object-fit: contain;
+}
+
 .route-transition-loader {
   position: fixed;
   inset: 0;
@@ -329,89 +336,44 @@ main .wow {
   }
 }
 
-/* Keep the app-development CTA text and button together on desktop. */
-@media (min-width: 992px) {
-  .call-to-section-two.app-development-cta .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-  }
 
-  .call-to-section-two.app-development-cta .inner::after {
-    display: none;
-  }
-
-  .call-to-section-two.app-development-cta h2 {
-    flex: 1;
-    min-width: 0;
-    float: none;
-    margin: 0;
-    font-size: clamp(24px, 2.2vw, 28px);
-    line-height: 1.25;
-  }
-
-  .call-to-section-two.app-development-cta .link-box {
-    flex: 0 0 auto;
-    float: none;
-    padding-top: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .ui-designing-page .call-to-section-two.alternate .inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-  }
-
-  .ui-designing-page .call-to-section-two.alternate .inner::after {
-    display: none;
-  }
-
-  .ui-designing-page .call-to-section-two.alternate h2 {
-    flex: 1;
-    min-width: 0;
-    float: none;
-    margin: 0;
-    font-size: clamp(24px, 2.2vw, 28px);
-    line-height: 1.25;
-  }
-
-  .ui-designing-page .call-to-section-two.alternate .link-box {
-    flex: 0 0 auto;
-    float: none;
-    padding-top: 0;
-  }
-}
 
 .ui-designing-page .service-details .ui-designing-intro {
   max-width: 65ch;
 }
 
+
+/* Shared CTA sizing across the seven service pages. */
+.call-to-section-two.alternate h2 {
+  font-size: clamp(13px, 4vw, 28px);
+  line-height: 1.25;
+}
+
+.call-to-section-two.alternate h2 br {
+  display: none;
+}
+
 @media (min-width: 992px) {
-  .call-to-section-two.seo-cta .inner {
+  .call-to-section-two.alternate .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 32px;
   }
 
-  .call-to-section-two.seo-cta .inner::after {
+  .call-to-section-two.alternate .inner::after {
     display: none;
   }
 
-  .call-to-section-two.seo-cta h2 {
+  .call-to-section-two.alternate h2 {
     flex: 1;
     min-width: 0;
     float: none;
     margin: 0;
     font-size: clamp(24px, 2.2vw, 28px);
-    line-height: 1.25;
   }
 
-  .call-to-section-two.seo-cta .link-box {
+  .call-to-section-two.alternate .link-box {
     flex: 0 0 auto;
     float: none;
     padding-top: 0;

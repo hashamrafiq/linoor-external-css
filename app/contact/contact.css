@@ -1,0 +1,32 @@
+.contact-section.contact-section--reference .upper-info > .row {
+  grid-template-columns: minmax(0, 570px);
+  justify-content: center;
+}
+
+.contact-section--reference .info-block {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+#contact-form .field-inner {
+  position: relative;
+}
+
+#contact-form .contact-field-error {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  color: var(--thm-text);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#contact-form .contact-form-status {
+  color: var(--thm-text);
+  overflow-wrap: anywhere;
+}
+
+#contact-form button:disabled {
+  cursor: wait;
+}

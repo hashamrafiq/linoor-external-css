@@ -76,7 +76,7 @@
         <section class="contact-section contact-section--reference">
             <div class=auto-container>
                 <div class="sec-title centered">
-                    <h2>Offices near you<span class=dot>.</span></h2>
+                    <h2>Our Office<span class=dot>.</span></h2>
                 </div>
                 <div class=upper-info>
                     <div class="row clearfix">
@@ -84,54 +84,12 @@
                             data-wow-delay=0ms data-wow-duration=1500ms
                             style=visibility:visible;animation-duration:1500ms;animation-delay:0ms;animation-name:fadeInUp>
                             <div class=inner-box>
-                                <h5>Austin</h5>
+                                <h5>MOOASSIST</h5>
                                 <div class=text>
                                     <ul class=info>
-                                        <li>22 Texas West Hills</li>
-                                        <li><a href=mailto:needhelp@linoor.com>needhelp@linoor.com</a></li>
-                                        <li><a href=tel:666888000>666 888 000</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated"
-                            data-wow-delay=300ms data-wow-duration=1500ms
-                            style=visibility:visible;animation-duration:1500ms;animation-delay:300ms;animation-name:fadeInUp>
-                            <div class=inner-box>
-                                <h5>Boston</h5>
-                                <div class=text>
-                                    <ul class=info>
-                                        <li>5 Federal Street Boston</li>
-                                        <li><a href=mailto:needhelp@linoor.com>needhelp@linoor.com</a></li>
-                                        <li><a href=tel:666888000>666 888 000</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated"
-                            data-wow-delay=600ms data-wow-duration=1500ms
-                            style=visibility:visible;animation-duration:1500ms;animation-delay:600ms;animation-name:fadeInUp>
-                            <div class=inner-box>
-                                <h5>New york</h5>
-                                <div class=text>
-                                    <ul class=info>
-                                        <li>8th Broklyn New York</li>
-                                        <li><a href=mailto:needhelp@linoor.com>needhelp@linoor.com</a></li>
-                                        <li><a href=tel:666888000>666 888 000</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp animated"
-                            data-wow-delay=900ms data-wow-duration=1500ms
-                            style=visibility:visible;animation-duration:1500ms;animation-delay:900ms;animation-name:fadeInUp>
-                            <div class=inner-box>
-                                <h5>baltimore</h5>
-                                <div class=text>
-                                    <ul class=info>
-                                        <li>3 Lombabr 50 Baltimore</li>
-                                        <li><a href=mailto:needhelp@linoor.com>needhelp@linoor.com</a></li>
-                                        <li><a href=tel:666888000>666 888 000</a></li>
+                                        <li>E1 F6 Second Floor Near Euro Store Nadirabad, Main Bedian Rd, Cantt, Lahore, 54000</li>
+                                        <li><a href=mailto:mansoorisworking@gmail.com>mansoorisworking@gmail.com</a></li>
+                                        <li><a href=tel:03238898732>0323-8898732</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -150,37 +108,44 @@
                 <div class=form-box>
                     <div class=sec-title>
                         <h2>Write Us a Message<span class=dot>.</span></h2>
+                        <div class=lower-text>Have a project, development requirement, or technical challenge? Send us the details and our team will review your requirements.</div>
                     </div>
                     <div class=default-form>
-                        <form method=post action=sendemail.php id=contact-form novalidate>
+                        <form method=post action=/api/contact id=contact-form novalidate>
+                            <div class="contact-form-status" role="alert" hidden></div>
                             <div class="row clearfix">
                                 <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                     <div class=field-inner>
-                                        <input type=text name=username value placeholder="Your Name" required>
+                                        <input type=text name=username value placeholder="Your Name" required aria-describedby="contact-username-error" aria-label="Name">
+                                        <span class="contact-field-error" id="contact-username-error" aria-live="polite"></span>
                                     </div>
                                 </div>
                                 <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                     <div class=field-inner>
-                                        <input type=email name=email value placeholder="Email Address" required>
+                                        <input type=email name=email value placeholder="Email Address" required aria-describedby="contact-email-error" aria-label="Email">
+                                        <span class="contact-field-error" id="contact-email-error" aria-live="polite"></span>
                                     </div>
                                 </div>
                                 <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                     <div class=field-inner>
-                                        <input type=text name=phone value placeholder="Phone Number" required>
+                                        <input type=text name=phone value placeholder="Phone Number" required aria-describedby="contact-phone-error" aria-label="Phone">
+                                        <span class="contact-field-error" id="contact-phone-error" aria-live="polite"></span>
                                     </div>
                                 </div>
                                 <div class="form-group col-lg-6 col-md-6 col-sm-12">
                                     <div class=field-inner>
-                                        <input type=text name=subject value placeholder=Subject required>
+                                        <input type=text name=subject value placeholder=Subject required aria-describedby="contact-subject-error" aria-label="Subject">
+                                        <span class="contact-field-error" id="contact-subject-error" aria-live="polite"></span>
                                     </div>
                                 </div>
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12">
                                     <div class=field-inner>
-                                        <textarea name=message placeholder="Write Message" required></textarea>
+                                        <textarea name=message placeholder="Write Message" required aria-describedby="contact-message-error" aria-label="Message"></textarea>
+                                        <span class="contact-field-error" id="contact-message-error" aria-live="polite"></span>
                                     </div>
                                 </div>
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                    <button class="theme-btn btn-style-one">
+                                    <button type="submit" class="theme-btn btn-style-one">
                                         <i class=btn-curve></i>
                                         <span class=btn-title>Send message</span>
                                     </button>

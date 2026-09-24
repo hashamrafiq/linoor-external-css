@@ -86,3 +86,31 @@
     grid-column: span 1;
   }
 }
+
+@media (min-width: 992px) {
+  .servicesPage :global(.call-to-section-two.alternate .inner) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .servicesPage :global(.call-to-section-two.alternate .inner::after) {
+    display: none;
+  }
+
+  .servicesPage :global(.call-to-section-two.alternate h2) {
+    flex: 1;
+    min-width: 0;
+    float: none;
+    margin: 0;
+    font-size: clamp(24px, 2.2vw, 28px);
+    line-height: 1.25;
+  }
+
+  .servicesPage :global(.call-to-section-two.alternate .link-box) {
+    flex: 0 0 auto;
+    float: none;
+    padding-top: 0;
+  }
+}

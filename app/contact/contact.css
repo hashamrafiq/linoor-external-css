@@ -13,18 +13,23 @@
 }
 
 #contact-form .contact-field-error {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  color: var(--thm-text);
+  display: none;
+  color: var(--thm-base);
   font-size: 14px;
   line-height: 20px;
+  margin-top: 8px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+#contact-form .contact-field-error:not(:empty) {
+  display: block;
 }
 
 #contact-form .contact-form-status {
-  color: var(--thm-text);
+  color: var(--thm-base);
   overflow-wrap: anywhere;
+  text-align: left;
 }
 
 #contact-form button:disabled {

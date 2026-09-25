@@ -8,8 +8,8 @@ body {
 
 #thm-logo,
 #fLogo {
-  width: 133px;
-  height: 34px;
+  width: 157px;
+  height: 42px;
   object-fit: contain;
 }
 
@@ -106,7 +106,7 @@ body {
 }
 
 .sponsors-section.sponsors-section__about-two {
-  background-color: var(--thm-base);
+  background-color: #fff;
 }
 
 /* Contact Us reference layout. */
@@ -377,5 +377,21 @@ main .wow {
     flex: 0 0 auto;
     float: none;
     padding-top: 0;
+  }
+}
+
+/* About values reuse the service-details checkmark list treatment. */
+.service-details .text-content .about-values {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+}
+.service-details .text-content .about-values li:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+@media (max-width: 575px) {
+  .service-details .text-content .about-values {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

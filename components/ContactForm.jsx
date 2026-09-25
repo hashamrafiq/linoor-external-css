@@ -68,10 +68,10 @@ export default function ContactForm() {
           const first = Object.keys(contactLimits).find((name) => result.errors[name]);
           if (first) form.elements.namedItem(first).focus();
         }
-        throw new Error("Submission failed");
-      } catch {
+        throw new Error(result.error || "Something went wrong while sending your message. Please try again.");
+      } catch (error) {
         if (controller.signal.aborted) return;
-        status.textContent = "Something went wrong while sending your message. Please try again.";
+        status.textContent = error.message || "Something went wrong while sending your message. Please try again.";
         status.hidden = false;
         pending = false;
         button.disabled = false;

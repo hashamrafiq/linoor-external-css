@@ -2,6 +2,7 @@ import { validateContact } from "../../../lib/contact-validation.mjs";
 
 export const runtime = "nodejs";
 const failure = "Something went wrong while sending your message. Please try again.";
+const configurationFailure = "Email delivery is not configured yet. Please add RESEND_API_KEY, CONTACT_EMAIL, and CONTACT_FROM_EMAIL.";
 
 export async function POST(request) {
   const origin = request.headers.get("origin");
@@ -19,7 +20,7 @@ export async function POST(request) {
   const key = request.headers.get("idempotency-key");
   if (!key || !/^[a-zA-Z0-9-]{16,100}$/.test(key)) return Response.json({ error: failure }, { status: 400 });
   const { RESEND_API_KEY, CONTACT_EMAIL, CONTACT_FROM_EMAIL } = process.env;
-  if (!RESEND_API_KEY || !CONTACT_EMAIL || !CONTACT_FROM_EMAIL) return Response.json({ error: failure }, { status: 503 });
+  if (!RESEND_API_KEY || !CONTACT_EMAIL || !CONTACT_FROM_EMAIL) return Response.json({ error: configurationFailure }, { status: 503 });
   try {
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",

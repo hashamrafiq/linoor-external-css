@@ -6,7 +6,9 @@ const homepageMarkup = fs.readFileSync(
   "utf8",
 );
 const homepageFooter = homepageMarkup.match(/<footer\b[\s\S]*?<\/footer>/i)?.[0] ?? "";
-const footerLogoMarkup = homepageFooter.match(/<div class=logo>([\s\S]*?)<\/div>/i)?.[1] ?? "";
+const footerLogoMarkup = (
+  homepageFooter.match(/<div class=logo>([\s\S]*?)<\/div>/i)?.[1] ?? ""
+).replace("/mooassist-logo.png", "/mooassist-logo-light.png");
 
 export default function Footer() {
   return (
@@ -41,10 +43,7 @@ export default function Footer() {
                   <h6>Company</h6>
                   <ul>
                     <li><a href="/about">About</a></li>
-                    <li><a href="/#developers">Developers</a></li>
-                    <li><a href="/contact">Careers</a></li>
-                    <li><a href="/#our-work">Our Work</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
                   </ul>
                 </div>
               </div>
